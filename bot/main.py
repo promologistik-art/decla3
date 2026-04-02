@@ -6,7 +6,6 @@ from config import Config
 from database import db
 from loguru import logger
 from bot.handlers import start, files, calculate, download
-import sys
 
 async def main():
     # Инициализация БД
@@ -26,7 +25,4 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        logger.info("Бот остановлен")
+    asyncio.run(main())
