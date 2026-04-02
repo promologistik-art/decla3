@@ -7,10 +7,11 @@ load_dotenv()
 BASE_DIR = Path(__file__).parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 DOWNLOADS_DIR = BASE_DIR / "downloads"
-DB_PATH = BASE_DIR / "tax_bot.db"
+LOGS_DIR = BASE_DIR / "logs"
 
 # Создаём директории
 DOWNLOADS_DIR.mkdir(exist_ok=True)
+LOGS_DIR.mkdir(exist_ok=True)
 
 class Config:
     BOT_TOKEN = os.getenv("BOT_TOKEN")
