@@ -7,6 +7,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 DOWNLOADS_DIR = BASE_DIR / "downloads"
+DB_PATH = BASE_DIR / "tax_bot.db"
 LOGS_DIR = BASE_DIR / "logs"
 
 # Создаём директории
@@ -30,5 +31,3 @@ class Config:
     # Лимиты
     MAX_FILE_SIZE = 50 * 1024 * 1024  # 50 MB
     SESSION_TIMEOUT = 3600  # 1 hour
-
-config = Config()
